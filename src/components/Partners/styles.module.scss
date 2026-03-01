@@ -1,0 +1,99 @@
+@use "../../styles/_variables" as v;
+
+.section {
+  margin: 90px 0 0 0;
+}
+
+.container {
+  width: 1270px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.card {
+  position: relative;
+  height: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.image {
+  width: 634px;
+  height: 350px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 85%
+  );
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  margin: 74px 0 0 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  max-width: 216.49px;
+}
+
+.desc {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+  max-width: 199.92px;
+}
+
+.button {
+  margin-top: 26px;
+  width: 144.69px;
+  height: 48px;
+  border: 0;
+  border-radius: 6px;
+  background: #ffcc00;
+  color: v.$primary-black-botao-text;
+  font-weight: 800;
+  letter-spacing: 8%;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1200px) {
+  .container {
+    width: min(1160px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 200px;
+  }
+}
