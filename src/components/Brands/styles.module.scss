@@ -1,0 +1,78 @@
+@use "../../styles/_variables" as v;
+
+.section {
+  padding: 90px 0 0 0;
+}
+
+.container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 32px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: v.$titles;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandItem {
+  width: 211px;
+  height: 211px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.13);
+}
+
+.active {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.brandLogo {
+  width: 117px;
+  height: 34.76;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(1160px, calc(100% - 32px));
+  }
+
+  .grid {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .brandItem {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .brandItem {
+    width: 180px;
+    height: 180px;
+  }
+
+  .brandLogo {
+    width: 95px;
+  }
+}
