@@ -1,0 +1,128 @@
+@use "../../styles/_variables" as v;
+
+.section {
+  background: #251a55;
+  margin: 90px 0 0 0;
+  height: 162px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 50px;
+  width: 100%;
+  gap: 112px;
+  width: 100%;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.textBlock {
+  max-width: 535px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  outline: none;
+
+  &::placeholder {
+    color: v.$placeholder-newsletter;
+  }
+}
+
+.button {
+  height: 42px;
+  border: 0;
+  width: 157px;
+  border-radius: 8px;
+  background: v.$primary-yellow-hero-text;
+  color: v.$button-newsletter;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.checkbox {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  color: #fff;
+  font-size: 13px;
+  align-items: center;
+
+  input {
+    appearance: none;
+    border: 1px solid #7b3f00;
+    background: #ffffff;
+    width: 14px;
+    height: 14px;
+    accent-color: v.$primary-yellow-hero-text;
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(1160px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form {
+    align-items: stretch;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
