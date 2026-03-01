@@ -1,0 +1,73 @@
+@use "../../styles/_variables" as v;
+
+.section {
+  width: 100%;
+  padding: 39px 0;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 42px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.card {
+  width: 128px;
+  height: 128px;
+  border: 0;
+  border-radius: 10px;
+  background: v.$background-gray-categories;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.13);
+}
+
+.icon {
+  width: 61px;
+  height: 61px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b4b4b;
+}
+
+.active {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+.labelActive {
+  color: v.$primary-purple-categories-text;
+}
+
+/* Responsivo: vira scroll horizontal */
+@media (max-width: 900px) {
+  .list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .item {
+    flex: 0 0 auto;
+  }
+}
