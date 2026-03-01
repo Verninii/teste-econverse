@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import type { EconverseProduct } from "../../types/econverse";
-import formatBRL from "../../helpers/FormatBRL";
+import { ProductItem } from "./ProductItem";
 
 type Tab = { id: string; label: string };
 
@@ -71,30 +71,11 @@ export function Products({
 
           <ul className={styles.grid} aria-label="Lista de produtos">
             {products.slice(0, 4).map((p) => (
-              <li key={p.productName} className={styles.card}>
-                <button
-                  type="button"
-                  className={styles.cardBtn}
-                  onClick={() => onProductClick?.(p)}
-                >
-                  <div className={styles.imageWrap}>
-                    <img
-                      className={styles.image}
-                      src={p.photo}
-                      alt={p.productName}
-                    />
-                  </div>
-
-                  <p className={styles.descName}>{p.productName}</p>
-                  <p className={styles.desc}>{p.descriptionShort}</p>
-
-                  <p className={styles.price}>{formatBRL(p.price)}</p>
-                  <p className={styles.interest}>ou 2x de R$ 49,95 sem juros</p>
-                  <p className={styles.free}>Frete grátis</p>
-
-                  <span className={styles.buyBtn}>COMPRAR</span>
-                </button>
-              </li>
+              <ProductItem
+                key={p.productName}
+                product={p}
+                onClick={onProductClick}
+              />
             ))}
           </ul>
 
