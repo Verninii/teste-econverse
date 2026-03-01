@@ -1,0 +1,224 @@
+@use "../../styles/_variables" as v;
+
+.section {
+  padding: 90px 0 0 0;
+}
+
+.container {
+  width: 1364px;
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-inline: 130px;
+}
+
+.line {
+  height: 1px;
+  background: #eaeaea;
+  width: 360px;
+}
+
+.title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: v.$titles;
+}
+
+.onlyViewAll {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-block: 8px;
+}
+
+.viewAll {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: v.$prices;
+}
+
+.tabs {
+  margin: 0px auto;
+  width: 1280px;
+}
+
+.tabList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid v.$stroke-gray-products;
+  background: #fff;
+}
+
+.tabItem {
+  border-right: 1px solid v.$stroke-gray-products;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.tabBtn {
+  width: 214px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+  color: v.$text-categories-products;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.tabActive {
+  color: v.$titles;
+  font-weight: 700;
+}
+
+.carouselWrap {
+  display: flex;
+  align-items: center;
+}
+
+.arrowLeft,
+.arrowRight {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: v.$prices;
+  font-size: 20px;
+  border: 1 #000;
+  line-height: 1;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    color: #333;
+    border-color: #d8d8d8;
+  }
+}
+
+.arrowLeft {
+  margin-right: 14px;
+}
+
+.arrowRight {
+  margin-left: 14px;
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 22px;
+}
+
+.card {
+  width: 304px;
+  height: 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.13);
+}
+
+.cardBtn {
+  width: 275.85px;
+  height: 44px;
+  margin-left: 10px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.imageWrap {
+  height: 278px;
+  display: grid;
+  place-items: center;
+}
+
+.image {
+  max-height: 278px;
+  width: auto;
+}
+
+.descName {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: v.$prices;
+  min-height: 40px;
+}
+
+.desc {
+  margin: 0 0 0 0;
+  font-size: 16px;
+  color: v.$text-description-products-gray;
+  min-height: 28px;
+}
+
+.price {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: v.$prices;
+}
+
+.interest {
+  font-size: 12px;
+  color: v.$prices;
+}
+
+.free {
+  color: v.$titles;
+  font-size: 12px;
+}
+
+.buyBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 275.85px;
+  border-radius: 4px;
+  background: v.$titles;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1200px) {
+  .container {
+    width: min(1160px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    min-width: 260px;
+    flex: 0 0 auto;
+  }
+}
