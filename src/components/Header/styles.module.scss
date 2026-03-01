@@ -1,0 +1,211 @@
+@use "../../styles/_variables" as v;
+
+// .logoText {
+//     color: v.$color-text-dark;
+//   }
+
+//   .active {
+//     color: v.$color-primary;
+//   } Exemplo Variaveis
+
+.header {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.threeIcons {
+  width: 20px;
+  height: 20px;
+  padding-right: 9px;
+}
+
+.container {
+  width: 1280px;
+  margin-block: auto;
+}
+
+.topBar {
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+}
+
+.topItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 119px;
+  font-size: 12px;
+  color: v.$primary-gray-header-text;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-block: 6px;
+}
+
+.topItem {
+  display: inline-flex;
+  align-items: center;
+
+  strong {
+    color: v.$primary-purple-header-text;
+    font-weight: 600;
+  }
+}
+
+.mainRow {
+  background: #fff;
+}
+
+.brandSearchActions {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo {
+  display: inline-flex;
+  width: 139px;
+  height: 41.3px;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding-right: 77px;
+}
+
+.search {
+  position: relative;
+  width: 630px;
+  height: 48px;
+  justify-self: center;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  padding: 0 48px 0 20px;
+  border: 1px solid #ececec;
+  background: #f7f7f7;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: v.$primary-gray-header-text;
+  outline: none;
+
+  &::placeholder {
+    color: #9a9a9a;
+  }
+
+  &:focus {
+    background: #fff;
+    border-color: #cfcfcf;
+  }
+}
+
+.searchButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.iconBtn {
+  color: #6f6f6f;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 91px;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  justify-content: center;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  border-top: 1px solid #e6e6e6;
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: v.$primary-gray-header-text;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-block: 10px;
+  display: inline-flex;
+  align-items: end;
+  gap: 12px; // espaço entre ícone e texto
+
+  &:hover {
+    color: v.$primary-purple-header-text;
+  }
+}
+
+.active {
+  color: #5a2dff;
+}
+
+.subscription {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a7a7a;
+  white-space: nowrap;
+
+  &:hover {
+    color: #2b2b2b;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .brandSearchActions {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "logo actions"
+      "search search";
+    row-gap: 12px;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .actions {
+    grid-area: actions;
+    justify-self: end;
+  }
+
+  .search {
+    grid-area: search;
+    max-width: none;
+  }
+}
