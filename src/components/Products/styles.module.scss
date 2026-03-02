@@ -128,6 +128,7 @@
   margin: 0;
   display: flex;
   gap: 22px;
+  width: 100%;
 }
 
 .card {
@@ -136,6 +137,7 @@
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.13);
+  flex: 0 0 auto;
 }
 
 .cardBtn {
@@ -205,20 +207,80 @@
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 1200px) {
-  .container {
-    width: min(1160px, calc(100% - 32px));
+@media (max-width: 799px) {
+  .arrowLeft,
+  .arrowRight,
+  .tabs,
+  .onlyViewAll,
+  .line {
+    display: none;
   }
-}
 
-@media (max-width: 900px) {
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .carouselWrap {
+    width: 100vw;
+  }
+
   .grid {
     overflow-x: auto;
-    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
   }
 
   .card {
-    min-width: 260px;
-    flex: 0 0 auto;
+    flex: 0 0 clamp(240px, 75vw, 304px);
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1439px) {
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
+
+  .tabs {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .title {
+    min-width: 380px;
+  }
+  .carouselWrap {
+    width: 100vw;
+  }
+
+  .grid {
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+    overflow-x: auto;
+    width: 100vw;
+  }
+
+  .viewAll {
+    display: none;
+  }
+  .tabList {
+    display: flex;
+    margin-inline: 50px;
+  }
+  .tabBtn {
+    width: 123px;
   }
 }

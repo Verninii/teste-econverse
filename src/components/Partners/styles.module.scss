@@ -82,18 +82,61 @@
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 1200px) {
-  .container {
-    width: min(1160px, calc(100% - 32px));
-  }
-}
 
-@media (max-width: 900px) {
+@media (max-width: 550px) {
+  .container {
+    width: 100vw;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
+  .overlay {
+    width: 100vw;
+  }
 
-  .card {
-    height: 200px;
+  .image {
+    width: 100vw;
+    height: 350px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1439px) {
+  .container {
+    width: min(1160px, calc(100% - 32px));
+    margin-inline: 20px;
+  }
+
+  .overlay {
+    width: 100vw;
+  }
+
+  .image {
+    width: 100vw;
+    height: 350px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 900px) {
+  .container {
+    width: 100vw;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-inline: 10vw;
+  }
+
+  .overlay {
+    width: 100vw;
+  }
+
+  .image {
+    width: 100vw;
+    height: 350px;
   }
 }

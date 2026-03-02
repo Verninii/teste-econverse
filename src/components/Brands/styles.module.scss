@@ -46,15 +46,16 @@
   height: 34.76;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .container {
-    width: min(1160px, calc(100% - 32px));
+    width: 100vw;
   }
 
   .grid {
     overflow-x: auto;
     justify-content: flex-start;
     padding-bottom: 10px;
+    gap: 10px;
   }
 
   .brandItem {
@@ -63,6 +64,11 @@
 }
 
 @media (max-width: 768px) {
+  .grid {
+    justify-content: start;
+    gap: 10px;
+  }
+
   .title {
     font-size: 22px;
   }

@@ -1,21 +1,21 @@
 @use "../../styles/_variables" as v;
 
 .section {
-  width: 100%;
   padding: 39px 0 0 0;
 }
 
 .container {
-  width: 1160px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .list {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 42px;
 }
 
@@ -59,15 +59,9 @@
   color: v.$primary-purple-categories-text;
 }
 
-/* Responsivo: vira scroll horizontal */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .list {
-    justify-content: flex-start;
     overflow-x: auto;
-    padding-bottom: 8px;
-  }
-
-  .item {
-    flex: 0 0 auto;
+    justify-content: space-between;
   }
 }

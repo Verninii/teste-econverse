@@ -29,7 +29,7 @@ export default function App() {
       />
       <PartnersSection />
       <Products
-        title="Produtos"
+        title="Produtos relacionados"
         products={products}
         onProductClick={(p) => setSelected(p)}
       />

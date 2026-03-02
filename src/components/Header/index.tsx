@@ -29,7 +29,7 @@ export function Header() {
                 src="/ShieldCheck.png"
                 alt="shield icon"
               />
-              <span>
+              <span className={styles.qualities}>
                 Compra <strong>100% segura</strong>
               </span>
             </span>
@@ -42,7 +42,7 @@ export function Header() {
                   alt="shield icon"
                 />
               </span>
-              <span>
+              <span className={styles.qualities}>
                 <strong>Frete grátis</strong> acima de R$ 200
               </span>
             </span>
@@ -55,7 +55,7 @@ export function Header() {
                   alt="shield icon"
                 />
               </span>
-              <span>
+              <span className={styles.qualities}>
                 <strong>Parcele</strong> suas compras
               </span>
             </span>
