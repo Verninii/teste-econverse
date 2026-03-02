@@ -219,16 +219,20 @@
   }
 
   .navList {
-    width: 100%;
+    width: 100vw;
     gap: 60px;
     justify-content: space-between;
+  }
+
+  .navList::-webkit-scrollbar {
+    display: none;
   }
 }
 
 @media (min-width: 670px) and (max-width: 1200px) {
   .search {
     max-width: 300px;
-    width: 100%;
+    width: 100vw;
   }
 
   .topItems {
@@ -251,5 +255,9 @@
 
   .navList {
     justify-content: space-between;
+  }
+
+  .navList::-webkit-scrollbar {
+    display: none;
   }
 }

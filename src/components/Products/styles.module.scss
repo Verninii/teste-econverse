@@ -215,7 +215,6 @@
   .line {
     display: none;
   }
-
   .container {
     width: 100vw;
     margin: 0 auto;
@@ -246,6 +245,10 @@
   .container {
     width: 100vw;
     margin: 0 auto;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
   }
 
   .arrowLeft,

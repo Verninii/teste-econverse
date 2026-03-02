@@ -64,4 +64,7 @@
     overflow-x: auto;
     justify-content: space-between;
   }
+  .list::-webkit-scrollbar {
+    display: none;
+  }
 }

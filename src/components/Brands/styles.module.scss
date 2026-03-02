@@ -58,6 +58,10 @@
     gap: 10px;
   }
 
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
   .brandItem {
     flex: 0 0 auto;
   }
@@ -67,6 +71,10 @@
   .grid {
     justify-content: start;
     gap: 10px;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
   }
 
   .title {
