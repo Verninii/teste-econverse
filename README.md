@@ -11,7 +11,7 @@
  
 - [Tech](#tech)
 - [About](#about)
-- [Archtecture](#archtecture)
+- [Architecture](#architecture)
 - [Getting started](#getting-started)
 - [Prerequisites](#requisites)
 - [Cloning](#cloning)
@@ -33,7 +33,7 @@
 - Fetch API
 - Deploy na Vercel
 
-<h2 id="archtecture">💯 Archtecture</h2>
+<h2 id="architecture">💯 Architecture</h2>
 
 The project follows a component-based structure with separation of concerns (components, hooks, helpers and types).
 
