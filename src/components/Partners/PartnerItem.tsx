@@ -22,7 +22,7 @@ export function PartnerItem({
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
+        <h4 className={styles.title}>{title}</h4>
         <p className={styles.desc}>{description}</p>
 
         <button type="button" className={styles.button} onClick={onClick}>

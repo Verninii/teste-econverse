@@ -41,7 +41,7 @@ export function ProductModal({ open, product, onClose }: Props) {
       aria-modal="true"
       aria-label="Detalhes do produto"
       onMouseDown={(e) => {
-        if (e.target === e.currentTarget) onClose(); // clique fora fecha
+        if (e.target === e.currentTarget) onClose();
       }}
     >
       <div className={styles.modal}>
@@ -64,7 +64,7 @@ export function ProductModal({ open, product, onClose }: Props) {
           </div>
 
           <div className={styles.right}>
-            <h3 className={styles.name}>{product.productName}</h3>
+            <h5 className={styles.name}>{product.productName}</h5>
             <p className={styles.price}>{formatBRL(product.price)}</p>
 
             <p className={styles.desc}>

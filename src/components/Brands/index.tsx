@@ -20,7 +20,7 @@ export function BrandsSection() {
   return (
     <section className={styles.section} aria-label="Navegue por marcas">
       <div className={styles.container}>
-        <h2 className={styles.title}>Navegue por marcas</h2>
+        <h3 className={styles.title}>Navegue por marcas</h3>
 
         <div className={styles.grid}>
           {brands.map((b) => (

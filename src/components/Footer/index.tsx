@@ -41,21 +41,21 @@ export function Footer() {
 
           <div className={styles.columns}>
             <div className={styles.col}>
-              <h4>Institucional</h4>
+              <p>Institucional</p>
               <a href="#">Sobre Nós</a>
               <a href="#">Movimento</a>
               <a href="#">Trabalhe conosco</a>
             </div>
 
             <div className={styles.col}>
-              <h4>Ajuda</h4>
+              <p>Ajuda</p>
               <a href="#">Suporte</a>
               <a href="#">Fale Conosco</a>
               <a href="#">Perguntas Frequentes</a>
             </div>
 
             <div className={styles.col}>
-              <h4>Termos</h4>
+              <p>Termos</p>
               <a href="#">Termos e Condições</a>
               <a href="#">Política de Privacidade</a>
               <a href="#">Troca e Devolução</a>

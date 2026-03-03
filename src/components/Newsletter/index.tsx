@@ -10,7 +10,6 @@ export function Newsletter() {
     if (!accepted) return;
     if (!name.trim() || !email.trim()) return;
 
-    // reset (opcional)
     setName("");
     setEmail("");
     setAccepted(false);
@@ -20,7 +19,7 @@ export function Newsletter() {
     <section className={styles.section} aria-label="Newsletter">
       <div className={styles.container}>
         <div className={styles.textBlock}>
-          <h1 className={styles.title}>Inscreva-se na nossa newsletter</h1>
+          <h6 className={styles.title}>Inscreva-se na nossa newsletter</h6>
           <span className={styles.subtitle}>
             Assine a nossa newsletter e receba as novidades e conteúdos
             exclusivos da Econverse.

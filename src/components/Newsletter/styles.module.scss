@@ -1,7 +1,7 @@
 @use "../../styles/_variables" as v;
 
 .section {
-  background: #251a55;
+  background: v.$purple-newsletter;
   margin: 90px 0 0 0;
   height: 162px;
   display: flex;
