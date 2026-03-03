@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-D4FAFF?style=for-the-badge&logo=typescript
+[REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center" style="font-weight: bold;">Teste Econverse 💻</h1>
 
-Currently, two official plugins are available:
+![react][REACT__BADGE]
+![typescript][TYPESCRIPT__BADGE]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<details open="open">
+<summary>Table of Contents</summary>
+ 
+- [Tech](#tech)
+- [About](#about)
+- [Archtecture](#archtecture)
+- [Getting started](#getting-started)
+- [Prerequisites](#requisites)
+- [Cloning](#cloning)
+- [Starting](#starting)
+- [Deploy](#deploy)
+  
+</details>
 
-## React Compiler
+<p align="center">
+    <img src="./public/readme.png" alt="Image econverse" width="400px">
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<h2 id="tech">💻 Tech</h2>
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Sass (SCSS Modules)
+- Fetch API
+- Deploy na Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<h2 id="archtecture">💯 Archtecture</h2>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The project follows a component-based structure with separation of concerns (components, hooks, helpers and types).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<h2 id="about">📌 About</h2>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+E-commerce page developed using **React + TypeScript**, following the Figma layout provided for the technical challenge.
+
+The project consumes an external JSON API to render the product showcase and implements a modal interaction displaying detailed product information. The layout was built pixel-perfect and is fully responsive.
+
+Semantic HTML structure and basic SEO best practices were applied.
+
+[![project][PROJECT__BADGE]][PROJECT__URL]
+
+<h2 id="getting-started">🚀 Getting started</h2>
+
+To run this project locally, make sure you have the required tools installed and follow the steps below.
+
+<h3 id="requisites">Prerequisites</h3>
+
+- [NodeJS]
+- [Git]
+- [Npm]
+
+<h3 id="cloning">Cloning</h3>
+
+```bash
+git clone https://github.com/Verninii/teste-econverse.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<h3 id="starting">Starting</h3>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd teste-econverse
+npm install
+npm run dev
 ```
+
+<h3 id="deploy">🔗 Deploy</h3>
+https://teste-econverse-ashy.vercel.app/
