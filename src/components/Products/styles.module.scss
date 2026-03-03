@@ -59,7 +59,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   border: 1px solid v.$stroke-gray-products;
-  background: #fff;
+  background: v.$white;
 }
 
 .tabItem {
@@ -97,7 +97,7 @@
   height: 32px;
   border-radius: 999px;
   border: 1px solid #e6e6e6;
-  background: #fff;
+  background: v.$white;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -134,7 +134,7 @@
 .card {
   width: 304px;
   height: 500px;
-  background: #fff;
+  background: v.$white;
   border-radius: 10px;
   box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.13);
   flex: 0 0 auto;
@@ -200,7 +200,7 @@
   width: 275.85px;
   border-radius: 4px;
   background: v.$titles;
-  color: #fff;
+  color: v.$white;
   font-weight: 700;
   font-size: 14px;
   margin-top: 14px;

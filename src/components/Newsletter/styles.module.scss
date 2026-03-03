@@ -21,7 +21,7 @@
 .title {
   font-size: 32px;
   font-weight: 600;
-  color: #fff;
+  color: v.$white;
   margin: 0;
 }
 
@@ -83,14 +83,14 @@
   display: flex;
   justify-content: flex-start;
   gap: 4px;
-  color: #fff;
+  color: v.$white;
   font-size: 13px;
   align-items: center;
 
   input {
     appearance: none;
     border: 1px solid #7b3f00;
-    background: #ffffff;
+    background: v.$white;
     width: 14px;
     height: 14px;
     accent-color: v.$primary-yellow-hero-text;

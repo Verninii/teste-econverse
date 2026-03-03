@@ -22,7 +22,7 @@
   max-width: 1280px;
   width: 100%;
   border-bottom: 1px solid #ececec;
-  background: #fff;
+  background: v.$white;
 }
 
 .topItems {
@@ -48,7 +48,7 @@
 }
 
 .mainRow {
-  background: #fff;
+  background: v.$white;
 }
 
 .brandSearchActions {
@@ -90,10 +90,12 @@
 
   &::placeholder {
     color: #9a9a9a;
+    font-size: 14;
+    font-weight: 500;
   }
 
   &:focus {
-    background: #fff;
+    background: v.$white;
     border-color: #cfcfcf;
   }
 }
