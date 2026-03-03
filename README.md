@@ -45,8 +45,6 @@ The project consumes an external JSON API to render the product showcase and imp
 
 Semantic HTML structure and basic SEO best practices were applied.
 
-[![project][PROJECT__BADGE]][PROJECT__URL]
-
 <h2 id="getting-started">🚀 Getting started</h2>
 
 To run this project locally, make sure you have the required tools installed and follow the steps below.
@@ -55,7 +53,6 @@ To run this project locally, make sure you have the required tools installed and
 
 - [NodeJS]
 - [Git]
-- [Npm]
 
 <h3 id="cloning">Cloning</h3>
 
