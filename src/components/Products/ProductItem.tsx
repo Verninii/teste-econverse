@@ -28,7 +28,9 @@ export function ProductItem({ product, onClick }: Props) {
         <p className={styles.desc}>{product.descriptionShort}</p>
 
         <p className={styles.price}>{formatBRL(product.price)}</p>
-        <p className={styles.interest}>ou 2x de R$ 49,95 sem juros</p>
+        <p className={styles.interest}>
+          ou 2x de {formatBRL(product.price / 2)} sem juros
+        </p>
         <p className={styles.free}>Frete grátis</p>
 
         <span className={styles.buyBtn}>COMPRAR</span>
